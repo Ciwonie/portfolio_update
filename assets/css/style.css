@@ -52,7 +52,7 @@ h1 {
     text-align: center;
     background: rgba(0,0,0,0.25);
     height: 300px;
-    padding: 10px;
+    padding: 35px 30px;
     border-radius: 4px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .75);
     margin:0 10%;
@@ -141,7 +141,7 @@ p {
 img {
     border-radius: 100px;
     border: 5px solid white;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .75);
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .1);
 }
 
 /*Portfolio*/
@@ -173,10 +173,9 @@ img {
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows:auto;
-    grid-gap: 20px;
-    background-color: rgba(0, 0, 0, .75);
+    grid-gap: 35px;
     width: 80%;
     height: auto;
 }
@@ -184,7 +183,6 @@ img {
 .portfolio-body{ 
     margin:0; 
     font:normal 75% Arial, Helvetica, sans-serif; 
-    overflow: hidden;
 } 
 
 #myProjects {
@@ -199,7 +197,43 @@ img {
     height: auto;
 }
 
+#particles-js-portfolio{ 
+    position:absolute; 
+    width: 100%; 
+    height: 1200px;
+    background-color: #232741; 
+    background-image: url(); 
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+    background-position: 50% 50%; 
+    text-align: center;
+    z-index: -1;
+} 
 
+
+
+.flip {
+    -webkit-perspective: 800;
+}
+.flip .card.flipped {
+    -webkit-transform: rotatex(-180deg);
+}
+.flip .card {
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: 0.5s;
+}
+.flip .card .face {
+
+}
+.flip .card .front {
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+}
+.flip .card .back {
+    -webkit-transform: rotatex(-180deg);
+    cursor: pointer;
+}
 
 
 
