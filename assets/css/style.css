@@ -138,17 +138,12 @@ p {
 }
 
 
-.profile-pic {
+img {
     border-radius: 100px;
     border: 5px solid white;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .1);
 }
 
- .face {
-    border-radius: 100px;
-    border: 5px solid white;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0);
-}
 
 /*Portfolio*/
 
@@ -216,40 +211,22 @@ p {
     z-index: -1;
 } 
 
-
-
-.flip {
-    -webkit-perspective: 800;
-    background-color: rgba(0, 0, 0, 0);
-}
-.flip .card.flipped {
-    -webkit-transform: rotatex(-180deg);
-    background-color: rgba(0, 0, 0, 0);
-}
-.flip .card {
-    -webkit-transform-style: preserve-3d;
-    -webkit-transition: 0.5s;
-    background-color: rgba(0, 0, 0, 0);
-}
-.flip .card .face {
-
-}
-.flip .card .front {
-    position: absolute;
-    z-index: 1;
+.boxes {
+    /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
+    filter: gray; /* IE5+ */
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+    -webkit-transition: all 0.8s ease-in-out;
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
 }
-.flip .card .back {
-    -webkit-transform: rotatex(-180deg);
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
+  
+.boxes:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.01);
+    transition: all .07s ease;
+    transform: scale(1.1);
 }
 
-.card {
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-}
 
 
 
@@ -319,6 +296,16 @@ p {
         background-position: 50% 50%; 
         text-align: center;
         z-index: -1;
+    } 
+
+    /*Projects*/
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:auto;
+        grid-gap: 30px;
+    }
+    #particles-js-portfolio{ 
+        height: 1600px;
     } 
 }
 
@@ -403,6 +390,16 @@ p {
         background-position: 50% 50%; 
         text-align: center;
         z-index: -1;
+    } 
+
+    /*Projects*/
+    .projects {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:auto;
+        grid-gap: 30px;
+    }
+    #particles-js-portfolio{ 
+        height: 2600px;
     } 
 }
 
