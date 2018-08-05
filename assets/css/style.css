@@ -54,7 +54,7 @@ h1 {
     height: 300px;
     padding: 35px 30px;
     border-radius: 4px;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .75);
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .1);
     margin:0 10%;
 }
 
@@ -127,7 +127,7 @@ footer {
     background: rgba(0,0,0,0.25);
     height:850px;
     border-radius: 4px;
-    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .75);
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .1);
     margin:0 10%;
     padding: 5px 20px;
     line-height: 1.7em;
@@ -138,10 +138,16 @@ p {
 }
 
 
-img {
+.profile-pic {
     border-radius: 100px;
     border: 5px solid white;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, .1);
+}
+
+ .face {
+    border-radius: 100px;
+    border: 5px solid white;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0);
 }
 
 /*Portfolio*/
@@ -214,13 +220,16 @@ img {
 
 .flip {
     -webkit-perspective: 800;
+    background-color: rgba(0, 0, 0, 0);
 }
 .flip .card.flipped {
     -webkit-transform: rotatex(-180deg);
+    background-color: rgba(0, 0, 0, 0);
 }
 .flip .card {
     -webkit-transform-style: preserve-3d;
     -webkit-transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0);
 }
 .flip .card .face {
 
@@ -229,12 +238,18 @@ img {
     position: absolute;
     z-index: 1;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
 }
 .flip .card .back {
     -webkit-transform: rotatex(-180deg);
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
 }
 
+.card {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
 
 
 
@@ -249,9 +264,12 @@ img {
 
 
 @media only screen and (max-width: 1024px) {
+    .index-body{ 
+        overflow: scroll;
+    }
     #landing{
         font-size: 1.9em;
-        top: 6%;
+        top: 5%;
     }
     h1 {
         font-size: 2em;
@@ -263,11 +281,15 @@ img {
         grid-template-rows: 1fr 1fr 1fr 1fr;
         margin: 0 10%;
         grid-gap: 0;
+        
 
     }
     .items {
         font-weight: 700;
     }
+    #particles-js{ 
+        height: 900px;
+    } 
 
     /*About*/
     .about {
